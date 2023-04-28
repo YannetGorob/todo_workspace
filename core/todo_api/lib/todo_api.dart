@@ -1,4 +1,4 @@
 /// A Very Good Project created by Very Good CLI.
-library home;
+library todo_api;
 
-export 'src/home_page.dart';
+export 'src/todo_api.dart';

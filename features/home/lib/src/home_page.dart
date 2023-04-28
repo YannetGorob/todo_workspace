@@ -6,6 +6,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ToDoScaffold();
+    return ToDoScaffold(
+      appBar: AppBar(
+        title: const Text('Home Page'),
+      ),
+    );
   }
 }
