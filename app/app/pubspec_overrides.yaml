@@ -1,5 +1,7 @@
-# melos_managed_dependency_overrides: home,todo_ui
+# melos_managed_dependency_overrides: home,todo_ui,authentication
 dependency_overrides:
+  authentication:
+    path: ../../features/authentication
   home:
     path: ../../features/home
   todo_ui:

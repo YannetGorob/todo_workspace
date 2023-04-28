@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: todo_ui
+dependency_overrides:
+  todo_ui:
+    path: ../../core/todo_ui

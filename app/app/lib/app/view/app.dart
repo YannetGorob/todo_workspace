@@ -1,6 +1,6 @@
 import 'package:app/l10n/l10n.dart';
+import 'package:authentication/authentication.dart';
 import 'package:flutter/material.dart';
-import 'package:home/home.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -11,7 +11,7 @@ class App extends StatelessWidget {
       theme: ThemeData.dark(),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

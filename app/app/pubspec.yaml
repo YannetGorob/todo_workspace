@@ -7,6 +7,8 @@ environment:
   sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
+  authentication:
+    path: ../../features/authentication
   bloc: ^8.1.1
   flutter:
     sdk: flutter
