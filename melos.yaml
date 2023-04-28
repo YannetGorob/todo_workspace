@@ -1,0 +1,45 @@
+name: todo_workspace
+
+sdkPath: .fvm/flutter_sdk
+
+packages:
+  - app/*
+  - core/*
+  - features/*
+
+scripts:
+  setup:
+    run: |
+      fvm install && \
+      fvm doctor && \
+      fvm flutter doctor && \
+      melos bootstrap --dir-exists=lib
+    description: |
+      Setup all modules
+
+  pub:get:
+    run: |
+      melos exec -c 5 --fail-fast -- \
+        exec fvm flutter pub get
+    select-package:
+      dir-exists:
+        - lib
+    description: |
+      Get dependencies in all packages
+
+  pub:upgrade:
+    run: |
+      melos exec -c 5 --fail-fast -- \
+        exec fvm flutter pub upgrade
+    select-package:
+      dir-exists:
+        - lib
+    description: |
+      Upgrade dependencies in all packages
+
+  clean:
+    run: |
+      melos exec -c 2 --fail-fast -- \
+        exec fvm flutter clean
+    description: |
+      Run flutter clean on all packages
